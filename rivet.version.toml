@@ -44,14 +44,7 @@
 # Properties like `max_players`, `tier`, `dockerfile`, `regions`, and more can
 # be overriden for specific game modes.
 [matchmaker.game_modes]
-	lobby = {}
-	relay = {}
-	chat = {}
-	chat_with_options = {}
-	state_handler = {}
-	auth = {}
-	reconnection = {}
-	custom_lobby = {}
+	default = {}
 
 # How Rivet CDN should host your static assets on our CDN.
 #
