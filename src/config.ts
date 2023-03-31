@@ -7,7 +7,7 @@ import { ReconnectionRoom } from "./rooms/04-reconnection";
 import { CustomLobbyRoom } from "./rooms/07-custom-lobby-room";
 
 export default {
-	getId: () => "Your Colyseus App",
+	getId: () => "My Colyseus App",
 
 	// initializeTransport: (options) => new uWebSocketsTransport(options),
 
