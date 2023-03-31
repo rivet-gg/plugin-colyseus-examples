@@ -3,3 +3,7 @@ package-lock.json
 npm-debug.log
 lib
 *.js
+
+### Rivet ###
+.rivet/
+.env
