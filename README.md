@@ -19,6 +19,7 @@ Set up Rivet game:
 1. Create a game on the [Rivet Developer Dashboard](https://hub.rivet.gg/developer/dashboard)
 1. Install the [Rivet CLI](https://github.com/rivet-gg/cli)
 1. Run `rivet init --recommend` to link your game
+1. Run `npm install`
 
 ## Running locally
 

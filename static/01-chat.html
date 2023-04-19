@@ -42,7 +42,12 @@
 		<script>
 			var host = window.document.location.host.replace(/:.*/, "");
 
-			if (!localStorage.rivetToken) {
+			if (
+				!localStorage.rivetToken &&
+				(location.hostname == "0.0.0.0" ||
+					location.hostname == "127.0.0.1" ||
+					location.hostname == "localhost")
+			) {
 				localStorage.rivetToken = prompt("Rivet token:");
 			}
 			var client = new Colyseus.Client({

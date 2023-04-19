@@ -50,10 +50,6 @@
 #
 # https://docs.rivet.gg/cdn/introduction
 [cdn]
-	# Command to run before uploading the site to Rivet. This can be used to
-	# build any JavaScript bundles or generate assets.
-	build_command = "echo 'Nothing to do'"
-
 	# The folder to upload to Rivet.
 	#
 	# If you're hosting a website, ensure that `index.html` is in the root of

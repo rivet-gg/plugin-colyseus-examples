@@ -11,7 +11,7 @@ export default {
 
 	// initializeTransport: (options) => new uWebSocketsTransport(options),
 
-	initializeGameServer: (gameServer) => {
+	initializeGameServer: async (gameServer) => {
 		// Define "lobby" room
 		gameServer.define("lobby", LobbyRoom);
 
@@ -50,7 +50,7 @@ export default {
 		});
 	},
 
-	beforeListen: () => {
+	beforeListen: async () => {
 		/**
 		 * Before before gameServer.listen() is called.
 		 */
