@@ -12,7 +12,7 @@
 		<!-- colyseus.js client -->
 		<script
 			type="text/javascript"
-			src="https://unpkg.com/colyseus.js@^0.14.0/dist/colyseus.js"
+			src="https://unpkg.com/@rivet-gg/plugin-colyseus-javascript@0.14.2/dist/colyseus.js"
 		></script>
 
 		<style type="text/css">
@@ -67,12 +67,12 @@
 		<script>
 			var host = window.document.location.host.replace(/:.*/, "");
 
-			var client = new Colyseus.Client(
-				location.protocol.replace("http", "ws") +
-					"//" +
-					host +
-					(location.port ? ":" + location.port : "")
-			);
+			if (!localStorage.rivetToken) {
+				localStorage.rivetToken = prompt("Rivet token:");
+			}
+			var client = new Colyseus.Client({
+				rivetToken: localStorage.rivetToken,
+			});
 			var room;
 
 			var colors = ["red", "green", "yellow", "blue", "cyan", "magenta"];
@@ -95,7 +95,7 @@
 						// listen to patches coming from the server
 						room.state.players.onAdd = function (
 							player,
-							sessionId
+							sessionId,
 						) {
 							var dom = document.createElement("div");
 							dom.className = "player";
@@ -115,7 +115,7 @@
 
 						room.state.players.onRemove = function (
 							player,
-							sessionId
+							sessionId,
 						) {
 							document.body.removeChild(players[sessionId]);
 							delete players[sessionId];
