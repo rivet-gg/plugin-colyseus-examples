@@ -1,5 +1,7 @@
 # Rivet Colyseus Plugin Examples
 
+**This repo has moved [here](https://github.com/rivet-gg/examples)!**
+
 This repository provides examples of running Colyseus with the Rivet plugin.
 
 [**Live demo**](https://colyseus.rivet.game/)
